@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         let url = URL(string: "https://granbluefantasy-campaign.mobage.jp/")
         let request = URLRequest(url: url!)
         webView.load(request)
+
+        webView.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
 
 

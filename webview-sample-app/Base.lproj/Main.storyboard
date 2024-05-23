@@ -17,22 +17,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXh-8X-aIG">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <wkWebView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXh-8X-aIG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="659"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Teh-Ki-L6D">
+                                <rect key="frame" x="96.666666666666686" y="718" width="200" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKi-Hd-zKc">
+                                        <rect key="frame" x="0.0" y="32.666666666666629" width="32" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="-"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-44-hIe">
+                                        <rect key="frame" x="165" y="32.666666666666629" width="35" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="+"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cKi-Hd-zKc" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="HKN-aY-eaW"/>
+                                    <constraint firstAttribute="width" constant="200" id="LQo-bd-eVP"/>
+                                    <constraint firstItem="cKi-Hd-zKc" firstAttribute="leading" secondItem="Teh-Ki-L6D" secondAttribute="leading" id="Wy2-OF-Akm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ewb-44-hIe" secondAttribute="trailing" id="Z65-UF-LJf"/>
+                                    <constraint firstItem="Ewb-44-hIe" firstAttribute="leading" secondItem="cKi-Hd-zKc" secondAttribute="trailing" constant="133" id="bB8-Io-FqX"/>
+                                    <constraint firstItem="Ewb-44-hIe" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="cwP-bK-6RB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pXh-8X-aIG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0jR-MV-O3d"/>
-                            <constraint firstItem="pXh-8X-aIG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A7g-dY-yih"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pXh-8X-aIG" secondAttribute="bottom" id="jP0-iC-PW4"/>
+                            <constraint firstItem="Teh-Ki-L6D" firstAttribute="top" secondItem="pXh-8X-aIG" secondAttribute="bottom" id="G2X-9R-DS8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pXh-8X-aIG" secondAttribute="bottom" constant="100" id="jP0-iC-PW4"/>
                             <constraint firstItem="pXh-8X-aIG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pEo-LC-Wnf"/>
+                            <constraint firstItem="Teh-Ki-L6D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rIB-ez-qKJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Teh-Ki-L6D" secondAttribute="bottom" id="vsD-wn-6Tp"/>
                         </constraints>
                     </view>
                     <connections>
