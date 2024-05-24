@@ -11,6 +11,11 @@ import WebKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var minusButton: UIButton!
+
+    var width: CGFloat = 200
+    var widthConstraint: NSLayoutConstraint?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +23,26 @@ class ViewController: UIViewController {
         let request = URLRequest(url: url!)
         webView.load(request)
 
-        webView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        widthConstraint = webView.widthAnchor.constraint(equalToConstant: width)
+        NSLayoutConstraint.activate([
+            widthConstraint!
+        ])
     }
 
+    @IBAction func plusDidTap() {
+        if view.bounds.size.width > width {
+            widthConstraint?.constant += 1
+            width += 1
+            webView.layoutIfNeeded()
+        }
+    }
 
+    @IBAction func minusDidTap() {
+        if 142 < width {
+            widthConstraint?.constant -= 1
+            width -= 1
+            webView.layoutIfNeeded()
+        }
+    }
 }
 
