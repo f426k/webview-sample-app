@@ -26,32 +26,59 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Teh-Ki-L6D">
-                                <rect key="frame" x="96.666666666666686" y="773" width="200" height="45"/>
+                                <rect key="frame" x="46.666666666666657" y="773" width="300" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKi-Hd-zKc">
-                                        <rect key="frame" x="0.0" y="5" width="32" height="35"/>
+                                        <rect key="frame" x="60" y="5" width="40" height="35"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="-"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="-1"/>
                                         <connections>
                                             <action selector="minusDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cxc-4p-FIs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-44-hIe">
-                                        <rect key="frame" x="165" y="5" width="35" height="35"/>
+                                        <rect key="frame" x="195" y="5" width="42" height="35"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="+"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="+1"/>
                                         <connections>
                                             <action selector="plusDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="16Z-aZ-ac2"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZz-CE-c9H">
+                                        <rect key="frame" x="247" y="5" width="53" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="+10"/>
+                                        <connections>
+                                            <action selector="plus10DidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKt-M9-cKS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-pe-hRd">
+                                        <rect key="frame" x="0.0" y="5" width="50" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="-10"/>
+                                        <connections>
+                                            <action selector="minus10DidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="n72-XZ-ndR"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz2-Ba-uY0">
+                                        <rect key="frame" x="129" y="12" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LZz-CE-c9H" secondAttribute="trailing" id="2Kd-3W-ifi"/>
+                                    <constraint firstItem="Nz2-Ba-uY0" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="7ew-bL-r4R"/>
+                                    <constraint firstItem="Uup-pe-hRd" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="ALJ-9d-czn"/>
+                                    <constraint firstItem="Nz2-Ba-uY0" firstAttribute="centerX" secondItem="Teh-Ki-L6D" secondAttribute="centerX" id="AZq-S0-O7N"/>
                                     <constraint firstItem="cKi-Hd-zKc" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="HKN-aY-eaW"/>
-                                    <constraint firstAttribute="width" constant="200" id="LQo-bd-eVP"/>
-                                    <constraint firstItem="cKi-Hd-zKc" firstAttribute="leading" secondItem="Teh-Ki-L6D" secondAttribute="leading" id="Wy2-OF-Akm"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ewb-44-hIe" secondAttribute="trailing" id="Z65-UF-LJf"/>
-                                    <constraint firstItem="Ewb-44-hIe" firstAttribute="leading" secondItem="cKi-Hd-zKc" secondAttribute="trailing" constant="133" id="bB8-Io-FqX"/>
+                                    <constraint firstItem="LZz-CE-c9H" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="Kcu-6I-H6u"/>
+                                    <constraint firstAttribute="width" constant="300" id="LQo-bd-eVP"/>
+                                    <constraint firstItem="Uup-pe-hRd" firstAttribute="leading" secondItem="Teh-Ki-L6D" secondAttribute="leading" id="RmC-v3-k6d"/>
+                                    <constraint firstItem="cKi-Hd-zKc" firstAttribute="leading" secondItem="Uup-pe-hRd" secondAttribute="trailing" constant="10" id="Wy2-OF-Akm"/>
+                                    <constraint firstItem="LZz-CE-c9H" firstAttribute="leading" secondItem="Ewb-44-hIe" secondAttribute="trailing" constant="10" id="Z65-UF-LJf"/>
                                     <constraint firstItem="Ewb-44-hIe" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="cwP-bK-6RB"/>
                                 </constraints>
                             </view>
@@ -71,6 +98,7 @@
                         <outlet property="minusButton" destination="cKi-Hd-zKc" id="YHh-YL-tYo"/>
                         <outlet property="plusButton" destination="Ewb-44-hIe" id="yVu-za-Pij"/>
                         <outlet property="webView" destination="pXh-8X-aIG" id="hA9-z9-cys"/>
+                        <outlet property="widthLabel" destination="Nz2-Ba-uY0" id="8zJ-IK-ICT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
