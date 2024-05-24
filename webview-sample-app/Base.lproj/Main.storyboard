@@ -95,8 +95,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="minusButton" destination="cKi-Hd-zKc" id="YHh-YL-tYo"/>
-                        <outlet property="plusButton" destination="Ewb-44-hIe" id="yVu-za-Pij"/>
                         <outlet property="webView" destination="pXh-8X-aIG" id="hA9-z9-cys"/>
                         <outlet property="widthLabel" destination="Nz2-Ba-uY0" id="8zJ-IK-ICT"/>
                     </connections>
