@@ -77,12 +77,14 @@
                                     <constraint firstItem="Uup-pe-hRd" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="ALJ-9d-czn"/>
                                     <constraint firstItem="Nz2-Ba-uY0" firstAttribute="centerX" secondItem="Teh-Ki-L6D" secondAttribute="centerX" id="AZq-S0-O7N"/>
                                     <constraint firstItem="cKi-Hd-zKc" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="HKN-aY-eaW"/>
+                                    <constraint firstItem="Nz2-Ba-uY0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cKi-Hd-zKc" secondAttribute="trailing" constant="8" symbolic="YES" id="I0k-Wq-2CB"/>
                                     <constraint firstItem="LZz-CE-c9H" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="Kcu-6I-H6u"/>
                                     <constraint firstAttribute="width" constant="300" id="LQo-bd-eVP"/>
                                     <constraint firstItem="Uup-pe-hRd" firstAttribute="leading" secondItem="Teh-Ki-L6D" secondAttribute="leading" id="RmC-v3-k6d"/>
                                     <constraint firstItem="cKi-Hd-zKc" firstAttribute="leading" secondItem="Uup-pe-hRd" secondAttribute="trailing" constant="10" id="Wy2-OF-Akm"/>
                                     <constraint firstItem="LZz-CE-c9H" firstAttribute="leading" secondItem="Ewb-44-hIe" secondAttribute="trailing" constant="10" id="Z65-UF-LJf"/>
                                     <constraint firstItem="Ewb-44-hIe" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="cwP-bK-6RB"/>
+                                    <constraint firstItem="Ewb-44-hIe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nz2-Ba-uY0" secondAttribute="trailing" constant="8" symbolic="YES" id="t5i-gh-RZK"/>
                                 </constraints>
                             </view>
                         </subviews>
