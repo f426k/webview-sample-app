@@ -12,20 +12,49 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var widthLabel: UILabel!
+    @IBOutlet weak var floatingButton: UIButton!
 
     var width: CGFloat = 200
     var widthConstraint: NSLayoutConstraint?
+    var url = URL(string: "https://www.apple.com/")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "https://granbluefantasy-campaign.mobage.jp/")
+
         let request = URLRequest(url: url!)
         webView.load(request)
         widthLabel.text = "\(width)"
+        floatingButton.layer.cornerRadius = 25
+        floatingButton.clipsToBounds = true
         widthConstraint = webView.widthAnchor.constraint(equalToConstant: width)
         NSLayoutConstraint.activate([
             widthConstraint!
         ])
+    }
+
+    @IBAction func inputUrlAlert() {
+        let alertController = UIAlertController(
+            title:"Enter URL",
+            message:"Enter the URL to open in WebView.",
+            preferredStyle: UIAlertController.Style.alert
+        )
+        alertController.addTextField()
+        let openButton = UIAlertAction(title: "Open", style: UIAlertAction.Style.default) {(action:UIAlertAction) in
+            if let textField = alertController.textFields?.first {
+                guard let url = URL(string: textField.text!) else {
+                    // invalid url
+                    return
+                }
+                self.webView.load(URLRequest(url: url))
+            }
+        }
+        alertController.addAction(openButton)
+
+        let cancelButton = UIAlertAction(title: "cancel", style: UIAlertAction.Style.cancel, handler:nil)
+        alertController.addAction(cancelButton)
+
+        present(alertController, animated:true, completion: nil)
+
     }
 
     @IBAction func plusDidTap() {
