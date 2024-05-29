@@ -16,12 +16,11 @@ class ViewController: UIViewController {
 
     var width: CGFloat = 200
     var widthConstraint: NSLayoutConstraint?
-    var url = URL(string: "https://www.apple.com/")
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let request = URLRequest(url: url!)
+        let request = URLRequest(url: URL(string: "https://www.apple.com/")!)
         webView.load(request)
         widthLabel.text = "\(width)"
         floatingButton.layer.cornerRadius = 25
