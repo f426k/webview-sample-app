@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var widthLabel: UILabel!
     @IBOutlet weak var floatingButton: UIButton!
 
-    var width: CGFloat = 200
+    var width: CGFloat = 300
     var widthConstraint: NSLayoutConstraint?
 
     override func viewDidLoad() {
@@ -66,6 +66,15 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func plusHalfDidTap() {
+        if view.bounds.size.width > width {
+            widthConstraint?.constant += 0.5
+            width += 0.5
+            widthLabel.text = "\(width)"
+            webView.layoutIfNeeded()
+        }
+    }
+
     @IBAction func plus10DidTap() {
         if view.bounds.size.width > width {
             widthConstraint?.constant += 10
@@ -76,7 +85,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func minusDidTap() {
-        if 142 < width {
+        if 300 < width {
             widthConstraint?.constant -= 1
             width -= 1
             widthLabel.text = "\(width)"
@@ -84,8 +93,17 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func minusHalfDidTap() {
+        if 300 < width {
+            widthConstraint?.constant -= 0.5
+            width -= 0.5
+            widthLabel.text = "\(width)"
+            webView.layoutIfNeeded()
+        }
+    }
+
     @IBAction func minus10DidTap() {
-        if 142 < width {
+        if 300 < width {
             widthConstraint?.constant -= 10
             width -= 10
             widthLabel.text = "\(width)"

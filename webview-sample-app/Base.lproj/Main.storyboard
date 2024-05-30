@@ -29,18 +29,18 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Teh-Ki-L6D">
-                                <rect key="frame" x="46.666666666666657" y="773" width="300" height="45"/>
+                                <rect key="frame" x="0.0" y="773" width="393" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKi-Hd-zKc">
-                                        <rect key="frame" x="59.333333333333343" y="5" width="40" height="35"/>
+                                        <rect key="frame" x="56.333333333333343" y="5" width="40" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="-1"/>
                                         <connections>
                                             <action selector="minusDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cxc-4p-FIs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-44-hIe">
-                                        <rect key="frame" x="195" y="5" width="42" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-44-hIe">
+                                        <rect key="frame" x="291.66666666666669" y="5" width="42" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="+1"/>
                                         <connections>
@@ -48,7 +48,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZz-CE-c9H">
-                                        <rect key="frame" x="247" y="5" width="53" height="35"/>
+                                        <rect key="frame" x="338.66666666666669" y="5" width="52.333333333333314" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="+10"/>
                                         <connections>
@@ -56,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-pe-hRd">
-                                        <rect key="frame" x="0.0" y="5.3333333333333712" width="49.333333333333336" height="34.333333333333336"/>
+                                        <rect key="frame" x="2" y="5.3333333333333712" width="49.333333333333336" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="-10"/>
                                         <connections>
@@ -64,27 +64,44 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz2-Ba-uY0">
-                                        <rect key="frame" x="129" y="12" width="42" height="21"/>
+                                        <rect key="frame" x="175.66666666666666" y="12" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-dq-byM">
+                                        <rect key="frame" x="227.66666666666663" y="5" width="59" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="+0.5"/>
+                                        <connections>
+                                            <action selector="plusHalfDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="N1w-t0-KLV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPc-ui-tDg">
+                                        <rect key="frame" x="101.33333333333331" y="5" width="56" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="-0.5"/>
+                                        <connections>
+                                            <action selector="minusHalfDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUC-4R-0gg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="LZz-CE-c9H" secondAttribute="trailing" id="2Kd-3W-ifi"/>
+                                    <constraint firstItem="Ewb-44-hIe" firstAttribute="leading" secondItem="Ckb-dq-byM" secondAttribute="trailing" constant="5" id="5mI-DC-pmk"/>
                                     <constraint firstItem="Nz2-Ba-uY0" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="7ew-bL-r4R"/>
+                                    <constraint firstItem="qPc-ui-tDg" firstAttribute="leading" secondItem="cKi-Hd-zKc" secondAttribute="trailing" constant="5" id="7hd-lh-eJm"/>
                                     <constraint firstItem="Uup-pe-hRd" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="ALJ-9d-czn"/>
                                     <constraint firstItem="Nz2-Ba-uY0" firstAttribute="centerX" secondItem="Teh-Ki-L6D" secondAttribute="centerX" id="AZq-S0-O7N"/>
+                                    <constraint firstAttribute="trailing" secondItem="LZz-CE-c9H" secondAttribute="trailing" constant="2" id="C8B-ui-IcR"/>
                                     <constraint firstItem="cKi-Hd-zKc" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="HKN-aY-eaW"/>
-                                    <constraint firstItem="Nz2-Ba-uY0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cKi-Hd-zKc" secondAttribute="trailing" constant="8" symbolic="YES" id="I0k-Wq-2CB"/>
+                                    <constraint firstItem="Ckb-dq-byM" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="KIf-VV-Wum"/>
                                     <constraint firstItem="LZz-CE-c9H" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="Kcu-6I-H6u"/>
-                                    <constraint firstAttribute="width" constant="300" id="LQo-bd-eVP"/>
-                                    <constraint firstItem="Uup-pe-hRd" firstAttribute="leading" secondItem="Teh-Ki-L6D" secondAttribute="leading" id="RmC-v3-k6d"/>
-                                    <constraint firstItem="cKi-Hd-zKc" firstAttribute="leading" secondItem="Uup-pe-hRd" secondAttribute="trailing" constant="10" id="Wy2-OF-Akm"/>
-                                    <constraint firstItem="LZz-CE-c9H" firstAttribute="leading" secondItem="Ewb-44-hIe" secondAttribute="trailing" constant="10" id="Z65-UF-LJf"/>
+                                    <constraint firstItem="Uup-pe-hRd" firstAttribute="leading" secondItem="Teh-Ki-L6D" secondAttribute="leading" constant="2" id="SL8-u4-a93"/>
+                                    <constraint firstItem="cKi-Hd-zKc" firstAttribute="leading" secondItem="Uup-pe-hRd" secondAttribute="trailing" constant="5" id="Wy2-OF-Akm"/>
+                                    <constraint firstItem="qPc-ui-tDg" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="YSP-Hl-Dar"/>
+                                    <constraint firstItem="LZz-CE-c9H" firstAttribute="leading" secondItem="Ewb-44-hIe" secondAttribute="trailing" constant="5" id="Z65-UF-LJf"/>
                                     <constraint firstItem="Ewb-44-hIe" firstAttribute="centerY" secondItem="Teh-Ki-L6D" secondAttribute="centerY" id="cwP-bK-6RB"/>
-                                    <constraint firstItem="Ewb-44-hIe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nz2-Ba-uY0" secondAttribute="trailing" constant="8" symbolic="YES" id="t5i-gh-RZK"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltg-Dq-UML">
@@ -104,9 +121,11 @@
                         <constraints>
                             <constraint firstItem="pXh-8X-aIG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0jR-MV-O3d"/>
                             <constraint firstItem="Teh-Ki-L6D" firstAttribute="top" secondItem="pXh-8X-aIG" secondAttribute="bottom" id="G2X-9R-DS8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Teh-Ki-L6D" secondAttribute="trailing" id="I7O-sT-iMA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ltg-Dq-UML" secondAttribute="bottom" constant="80" id="V4G-XU-9hg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ltg-Dq-UML" secondAttribute="trailing" constant="25" id="dWa-LK-S1d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pXh-8X-aIG" secondAttribute="bottom" constant="45" id="jP0-iC-PW4"/>
+                            <constraint firstItem="Teh-Ki-L6D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k90-O7-RPX"/>
                             <constraint firstItem="pXh-8X-aIG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pEo-LC-Wnf"/>
                             <constraint firstItem="Teh-Ki-L6D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rIB-ez-qKJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Teh-Ki-L6D" secondAttribute="bottom" id="vsD-wn-6Tp"/>
