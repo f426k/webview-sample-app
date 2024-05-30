@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 
         let request = URLRequest(url: URL(string: "https://www.apple.com/")!)
         webView.load(request)
+        webView.isInspectable = true
         widthLabel.text = "\(width)"
         floatingButton.layer.cornerRadius = 25
         floatingButton.clipsToBounds = true
